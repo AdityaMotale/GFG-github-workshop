@@ -16,8 +16,12 @@
         <p>Loading...</p>
     {:then attende}
         {#each attende as user}
-            <div class="rounded-full w-40 h-40 bg-slate-100 items-center flex flex-col justify-center">
-                <h2 class="font-montserrat font-medium text-teal-400 text-4xl">{user.name[0].toUpperCase()}</h2>
+            <div
+                class="rounded-full w-40 h-40 bg-slate-100 items-center flex flex-col justify-center m-8"
+            >
+                <h2 class="font-montserrat font-medium text-teal-400 text-4xl">
+                    {user.name[0].toUpperCase()}
+                </h2>
             </div>
         {/each}
     {:catch error}
