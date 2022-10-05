@@ -1,0 +1,20 @@
+{
+    "attendance": [
+        {
+            "name": "attendee 1",
+            "class": "CSE TY"
+        },
+        {
+            "name": "attendee 2",
+            "class": "CSE TY"
+        },
+        {
+            "name": "attendee 3",
+            "class": "CSE TY"
+        },
+        {
+            "name": "attendee 4",
+            "class": "CSE TY"
+        }
+    ]
+}
