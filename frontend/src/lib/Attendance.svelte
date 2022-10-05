@@ -21,22 +21,25 @@
             </p>
         </section>
     {:then attende}
-        <div class="grid grid-cols-6 gap-10">
+        <div class="grid grid-cols-5 gap-6">
             {#each attende as user}
-                <section class="items-center flex flex-col justify-center">
+                <section
+                    class="items-center flex flex-col justify-center bg-white rounded-lg p-5 mb-5 hover:scale-110 transition delay-100 ease-in-out"
+                >
                     <div
-                        class="rounded-full w-40 h-40 bg-slate-100 items-center flex flex-col justify-center"
+                        class="rounded-full w-40 h-40 bg-slate-100 bg-opacity-50 bg-none items-center flex flex-col justify-center font-montserrat font-medium text-teal-400 text-4xl"
                     >
-                        <h2
-                            class="font-montserrat font-medium text-teal-400 text-4xl"
-                        >
-                            {user.name[0].toUpperCase()}
-                        </h2>
+                        {user.name[0].toUpperCase()}
                     </div>
                     <h4
-                        class="font-montserrat font-medium text-teal-400 text-xl mt-6"
+                        class="font-montserrat font-medium text-teal-500 text-xl mt-6 text-center"
                     >
                         {user.name}
+                    </h4>
+                    <h4
+                        class="font-montserrat font-medium text-teal-500 text-sm mt-6 text-center"
+                    >
+                        {user.class}
                     </h4>
                 </section>
             {/each}
