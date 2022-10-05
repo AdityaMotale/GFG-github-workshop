@@ -1,19 +1,19 @@
 {
     "attendance": [
         {
-            "name": "attendee 1",
+            "name": "H U",
             "class": "CSE TY"
         },
         {
-            "name": "attendee 2",
-            "class": "CSE TY"
+            "name": "B K",
+            "class": "CSE SY"
         },
         {
-            "name": "attendee 3",
-            "class": "CSE TY"
+            "name": "Z M",
+            "class": "CSE SY"
         },
         {
-            "name": "attendee 4",
+            "name": "D B",
             "class": "CSE TY"
         }
     ]
