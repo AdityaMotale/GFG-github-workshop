@@ -11,22 +11,44 @@
     const attendees = getAttendeesData();
 </script>
 
-<section class="h-full w-full flex flex-row items-center justify-center">
+<section class="h-full">
     {#await attendees}
-        <p>Loading...</p>
-    {:then attende}
-        {#each attende as user}
-            <div
-                class="rounded-full w-40 h-40 bg-slate-100 items-center flex flex-col justify-center m-8"
+        <section class="w-full h-96 flex flex-col items-center justify-center">
+            <p
+                class="font-montserrat text-black font-medium text-sm text-center"
             >
-                <h2 class="font-montserrat font-medium text-teal-400 text-4xl">
-                    {user.name[0].toUpperCase()}
-                </h2>
-            </div>
-        {/each}
+                Loading...
+            </p>
+        </section>
+    {:then attende}
+        <div class="grid grid-cols-6 gap-10">
+            {#each attende as user}
+                <section class="items-center flex flex-col justify-center">
+                    <div
+                        class="rounded-full w-40 h-40 bg-slate-100 items-center flex flex-col justify-center"
+                    >
+                        <h2
+                            class="font-montserrat font-medium text-teal-400 text-4xl"
+                        >
+                            {user.name[0].toUpperCase()}
+                        </h2>
+                    </div>
+                    <h4
+                        class="font-montserrat font-medium text-teal-400 text-xl mt-6"
+                    >
+                        {user.name}
+                    </h4>
+                </section>
+            {/each}
+        </div>
     {:catch error}
-        <p class="font-montserrat text-red-500 font-medium text-sm">
-            Some error occurred! Please try again later
-        </p>
+        <section class="w-full h-96 flex flex-col items-center justify-center">
+            <p
+                class="font-montserrat text-red-500 font-medium text-sm text-center"
+            >
+                Some error occurred! Please try again later <br />
+                {`{${error}}`}
+            </p>
+        </section>
     {/await}
 </section>
