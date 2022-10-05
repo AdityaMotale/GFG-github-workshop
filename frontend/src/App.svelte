@@ -9,5 +9,8 @@
       GFG Git and GitHub Workshop Attendees
     </h3>
     <Attendance/>
+     <h3 class="text-center font-bold text-xl text-teal-600 font-montserrat mt-20">
+      by GFG Team MIT Aurangabad
+    </h3>
   </div>
 </main>
