@@ -21,7 +21,7 @@
             </p>
         </section>
     {:then attende}
-        <div class="grid grid-cols-5 gap-6">
+        <div class="grid md:grid-cols-3 md:gap-4 lg:grid-cols-5 lg:gap-6 sm:gap-6 grid-cols-2 gap-3">
             {#each attende as user}
                 <section
                     class="items-center flex flex-col justify-center bg-white rounded-lg p-5 mb-5 hover:scale-110 transition delay-100 ease-in-out"
