@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { instagram, linkedin } from "../constants/imgs";
+
     async function getAttendeesData() {
         let attendees = await fetch(
             "https://raw.githubusercontent.com/AdityaMotale/GFG-github-workshop/main/attendance.json"
@@ -21,7 +23,9 @@
             </p>
         </section>
     {:then attende}
-        <div class="grid md:grid-cols-3 md:gap-4 lg:grid-cols-5 lg:gap-6 sm:gap-6 grid-cols-2 gap-3">
+        <div
+            class="grid md:grid-cols-3 md:gap-4 lg:grid-cols-5 lg:gap-6 sm:gap-6 grid-cols-2 gap-3"
+        >
             {#each attende as user}
                 <section
                     class="items-center flex flex-col justify-center bg-white rounded-lg p-5 mb-5 hover:scale-110 transition delay-100 ease-in-out"
@@ -41,6 +45,30 @@
                     >
                         {user.class}
                     </h4>
+                    <div class="flex flex-row justify-center mt-5">
+                        {#if user.instagram != null}
+                            <a href="https://instagram.com/geeksforgeeks_mit/">
+                                <img
+                                    src={`${instagram}`}
+                                    alt="Linkdin"
+                                    height="20px"
+                                    width="20px"
+                                    class="mx-2"
+                                /></a
+                            >
+                        {/if}
+                        {#if user.linkedin != null}
+                            <a href="https://instagram.com/geeksforgeeks_mit/">
+                                <img
+                                    src={`${linkedin}`}
+                                    alt="Linkdin"
+                                    height="20px"
+                                    width="20px"
+                                    class="mx-2"
+                                /></a
+                            >
+                        {/if}
+                    </div>
                 </section>
             {/each}
         </div>
