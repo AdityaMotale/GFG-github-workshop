@@ -45,9 +45,12 @@
                     >
                         {user.class}
                     </h4>
+                    {#if user.about != null}
+                        <p class="my-2">{user.about}</p>
+                    {/if}
                     <div class="flex flex-row justify-center mt-5">
                         {#if user.instagram != null}
-                            <a href="https://instagram.com/geeksforgeeks_mit/">
+                            <a href={`${user.instagram}`}>
                                 <img
                                     src={`${instagram}`}
                                     alt="Linkdin"
@@ -57,8 +60,8 @@
                                 /></a
                             >
                         {/if}
-                        {#if user.linkedin != null}
-                            <a href="https://instagram.com/geeksforgeeks_mit/">
+                        {#if user.linkdin != null}
+                            <a href={`${user.linkdin}`}>
                                 <img
                                     src={`${linkedin}`}
                                     alt="Linkdin"
