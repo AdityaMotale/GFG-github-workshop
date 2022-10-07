@@ -49,28 +49,32 @@
                         <p class="my-2">{user.about}</p>
                     {/if}
                     <div class="flex flex-row justify-center mt-5">
-                        {#if user.instagram != null}
-                            <a href={`${user.instagram}`}>
-                                <img
-                                    src={`${instagram}`}
-                                    alt="Linkdin"
-                                    height="20px"
-                                    width="20px"
-                                    class="mx-2"
-                                /></a
-                            >
-                        {/if}
-                        {#if user.linkdin != null}
-                            <a href={`${user.linkdin}`}>
-                                <img
-                                    src={`${linkedin}`}
-                                    alt="Linkdin"
-                                    height="20px"
-                                    width="20px"
-                                    class="mx-2"
-                                /></a
-                            >
-                        {/if}
+                        <div>
+                            {#if user.linkdin != null}
+                                <a href={`${user.linkdin}`}>
+                                    <img
+                                        src={`${linkedin}`}
+                                        alt="Linkdin"
+                                        height="20px"
+                                        width="20px"
+                                        class="mx-2"
+                                    /></a
+                                >
+                            {/if}
+                        </div>
+                        <div>
+                            {#if user.instagram != null}
+                                <a href={`${user.instagram}`}>
+                                    <img
+                                        src={`${instagram}`}
+                                        alt="Instagram"
+                                        height="20px"
+                                        width="20px"
+                                        class="mx-2"
+                                    /></a
+                                >
+                            {/if}
+                        </div>
                     </div>
                 </section>
             {/each}
